@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Interactive Pins on ArcGIS Map - Piraeus, Greece</title>
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.23/esri/themes/light/main.css" />
+    <script src="https://js.arcgis.com/4.23/"></script>
+
+    <script>
+      require([
+        "esri/Map",
+        "esri/views/MapView",
+        "esri/Graphic",
+        "esri/geometry/Point",
+        "esri/PopupTemplate",
+      ], function (Map, MapView, Graphic, Point, PopupTemplate) {
+        var map = new Map({
+          basemap: "topo-vector",
+        });
+
+        var view = new MapView({
+          container: "viewDiv",
+          map: map,
+          center: [23.6386, 37.9442], // Longitude, latitude
+          zoom: 14,
+        });
+
+        view.when(function () {
+         // Καθεδρικός Ναός Αγίας Τριάδος
+         var pinPoint2 = new Point({
+            longitude: 23.645206363609887,//LEFT & RIGHT
+            latitude: 37.94430782965027,//UP & DOWN
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "orange",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Καθεδρικός Ναός Αγίας Τριάδος",
+            content: "Holy Trinity Cathedral",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+
+
+        // Δημοτικό Θέατρο Πειραιά
+        var pinPoint2 = new Point({
+            longitude: 23.64680494124167,//LEFT & RIGHT
+            latitude: 37.94336253762849,//UP & DOWN
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Δημοτικό Θέατρο Πειραιά",
+            content: "Municipal Theatre of Piraeus",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+
+
+                
+
+         // IEK AKMI PHREA
+      var pinPoint2 = new Point({
+            longitude: 23.6449,//LEFT & RIGHT
+            latitude: 37.9429,//UP & DOWN
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "pink",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "ΙΕΚ ΑΚΜΗ - Πειραιά",
+            content: "IEK AKMI - Piraeus",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+
+         // Saint Spyridon Church
+         var pinPoint2 = new Point({
+            longitude: 23.6443,//LEFT & RIGHT
+            latitude: 37.94289,//UP & DOWN
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "orange",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Ναός Αγίου Σπυρίδωνα",
+            content: "Saint Spyridon Church.",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+
+         // Platia Themistokleous (Tinaneios Kipos)
+         var pinPoint2 = new Point({
+            longitude: 23.6447,//LEFT & RIGHT
+            latitude: 37.9437,//UP & DOWN
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "green",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Πλατεία Θεμιστοκλέους (Τινάνειος Κήπος)",
+            content: "Platia Themistokleous (Tinaneios Kipos)",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+
+         // Πλατεία Κοραή
+         var pinPoint2 = new Point({
+            longitude: 23.64709963574188,//LEFT & RIGHT
+            latitude: 37.942611957328666//UP & DOWN
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "green",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Πλατεία Κοραή",
+            content: "",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+
+         // Port of Piraeus
+         var pinPoint2 = new Point({
+            longitude: 23.64049670241727,//LEFT & RIGHT
+            latitude: 37.945025019635374//UP & DOWN
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "red",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Λιμάνι Πειραιώς",
+            content: "Port of Piraeus",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+
+         // KFC of Piraeus
+         var pinPoint2 = new Point({
+            longitude: 23.64979510550135,//LEFT & RIGHT
+            latitude: 37.94014621567637//UP & DOWN
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "aqua",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "KFC Πειραιώς",
+            content: "KFC of Piraeus",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+
+        // Public
+        var pinPoint2 = new Point({
+            longitude: 23.64898072805637,//LEFT & RIGHT
+            latitude: 37.94024294613003//UP & DOWN
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "aqua",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Public",
+            content: "",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+
+        //The Clock of Piraeus
+
+        var pinPoint2 = new Point({
+            longitude: 23.648706413690938,//LEFT & RIGHT
+            latitude: 37.9391713071028//UP & DOWN
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "aqua",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Το Ρολόι",
+            content: "The Clock of Piraeus",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+
+          var pinPoint1 = new Point({
+            longitude: 23.64361279608924,
+            latitude: 37.9299029227252,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Μεταξά Αντικαρκινικό Νοσοκομείο Πειραιά",
+            content: "Metaxa Anticancer Hospital of Piraeus",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);
+
+//********************************************************************
+
+          var pinPoint1 = new Point({
+            longitude: 23.64565585939494 ,
+            latitude: 37.93436210934987
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Τζάνειο Γενικό Νοσοκομείο Πειραιά",
+            content: "Janio General Hospital of Piraeus",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);
+
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude: 23.62794602914315,
+            latitude: 37.93469004906069
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Σχολή Ναυτικών Δοκίμων",
+            content: "Hellenic Naval Academy",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);          
+
+//*******************************************************************
+
+          var pinPoint1 = new Point({
+            longitude: 23.637313647495617 ,
+            latitude: 37.928132993098174
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Ξενοδοχείο Σκορπιός",
+            content: "Scorpios sea side Hotel",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude: 23.642896369317864 ,
+            latitude: 37.92980696377759,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Ναός Αγίου Βασιλείου",
+            content: "Saint Basil's Church of Piraeus",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude: 23.646101848857825,
+            latitude: 37.94661141700504
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Πλαίσιο: Κατάστημα υπολογιστών",
+            content: "Plasio: Computer Store",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude: 23.65437688343138,
+            latitude: 37.9475794883168,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Yava Πειραίας: Γυμναστήριο",
+            content: "Yava Piraeus: Gym",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude: 23.64406303425562,
+            latitude: 37.937489363788515,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Αρχαιολογικό Μουσείο Πειραιά",
+            content: "Archaeological Museum of Piraeus",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude: 23.653888945212824,
+            latitude: 37.9357376730632,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Παραλία Βοτσαλάκια",
+            content: "Votsalakia beach",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);          
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude: 23.64778915767935,
+            latitude: 37.93084401114503,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Παραλία Φρεατυδα",
+            content: "Beach Freatida",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);          
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude: 23.63367158495909,
+            latitude: 37.92720388519978,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Ψαρόσκαλα Πειραϊκής",
+            content: "Psaroskala Piraiki Piraeus Tavern",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);          
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude:  23.62812458376143,
+            latitude: 37.93261917960183,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Ακτή",
+            content: "Akmti",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);          
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude: 23.630375211097565,
+            latitude: 37.9373348230031,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Το Υπερωκεάνιον",
+            content: "Yperokeanio",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);              
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude: 23.62414620155594,
+            latitude: 37.936241107572414,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Τερματικός σταθμός κρουαζιέρας Β",
+            content: "Cruise Terminal B",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);              
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude:  23.633512449479852,
+            latitude: 37.93823129892403,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "GML TECHNO CONTAINER ΕΛΛΆΔΑ",
+            content: "GML TECHNO CONTAINER HELLAS",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);              
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude:  23.635763077014964,
+            latitude: 37.93312123971152,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Αποσπερίτης Μαερειό Πειραιάς",
+            content: "Aposperitis Maereio Piraeus",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);              
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude:  23.64597046888265,
+            latitude: 37.94041865438628,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "CHE Cocina y Barra Sudamericana",
+            content: "Εστιατόριο λατινοαμερικανικής κουζίνας",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);              
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude:  23.649857916443302,
+            latitude: 37.940705515834004,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "JACKAROO",
+            content: "Σαντουιτσάδικο",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);              
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude:  23.638588989436798,
+            latitude: 37.952889703985704,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Μουστάκας Πειραιά",
+            content: "Moustakas Toys",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);              
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude: 23.638009936594834,
+            latitude: 37.95060670428184,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "Pirée",
+            content: "Κέντρο τεχνών / Art center",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);              
+
+//********************************************************************
+
+var pinPoint1 = new Point({
+            longitude: 23.638009936594834,
+            latitude: 37.95060670428184,
+          });
+
+          var pinSymbol1 = {
+            type: "simple-marker",
+            color: "blue",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate1 = new PopupTemplate({
+            title: "JUMBO",
+            content: "Κατάστημα παιχνιδιών / Toy Store",
+          });
+
+          var pinGraphic1 = new Graphic({
+            geometry: pinPoint1,
+            symbol: pinSymbol1,
+            popupTemplate: popupTemplate1,
+          });
+
+          view.graphics.add(pinGraphic1);              
+
+
+        //Olympiakos Georgios Karaiskakis Stadium
+
+        var pinPoint2 = new Point({
+            longitude: 23.665478206,//LEFT & RIGHT
+            latitude: 37.9481125521//UP & DOWN
+          });
+
+          var pinSymbol2 = {
+            type: "simple-marker",
+            color: "aqua",
+            size: "12px",
+            outline: {
+              color: [255, 255, 255],
+              width: 3,
+            },
+          };
+
+          var popupTemplate2 = new PopupTemplate({
+            title: "Στάδιο Γεώργιος Καραϊσκάκης",
+            content: "Olympiakos Georgios Karaiskakis Stadium",
+          });
+
+          var pinGraphic2 = new Graphic({
+            geometry: pinPoint2,
+            symbol: pinSymbol2,
+            popupTemplate: popupTemplate2,
+          });
+
+          view.graphics.add(pinGraphic2);
+
+        });
+      });      
+    </script>
+  </head>
+
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
